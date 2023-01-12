@@ -1,0 +1,184 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "EJERCICIO_videojuegos.GrandTheftAuto",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_164729730 { 
+   	label=EJERCICIO_videojuegos
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   GTA_5164729730[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)GTA_5</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   modosJuego: List&lt;String&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   plataformas: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   ventas: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ aniadirModoJuego(modo: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ eliminarModoJuego(indice: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getmodosJuego()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ sinopsis(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+GrandTheftAuto164729730[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)GrandTheftAuto</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   clasificacion: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   empresa: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   fechaLanzamiento: Date [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MC_JAVA164729730[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MC_JAVA</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   modosJuego: List&lt;String&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   plataformas: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   ventas: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ aniadirModoJuego(modo: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ eliminarModoJuego(indice: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getmodosJuego()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ sinopsis(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Minecraft164729730[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Minecraft</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   clasificacion: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   empresa: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   fechaLanzamiento: Date [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+videoJuego164729730[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)videoJuego</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   genero: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   nombre: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   precio: double [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ sinopsis(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+GrandTheftAuto164729730 -> GTA_5164729730[arrowhead=none, arrowtail=empty, dir=both];
+Minecraft164729730 -> MC_JAVA164729730[arrowhead=none, arrowtail=empty, dir=both];
+videoJuego164729730 -> GTA_5164729730[label="sinopsis() -> sinopsis()"];
+videoJuego164729730 -> GrandTheftAuto164729730[arrowhead=none, arrowtail=empty, dir=both];
+videoJuego164729730 -> MC_JAVA164729730[label="sinopsis() -> sinopsis()"];
+videoJuego164729730 -> Minecraft164729730[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml
