@@ -39,6 +39,4 @@ public abstract class Artista {
     }
 
 
-    public abstract String proximaPresentacion(int anio, int mes, int dia);
-
 }
