@@ -4,7 +4,6 @@ public abstract class Comida {
 
     private final String origen;
 
-
     public Comida(String origen) {
         this.origen = origen;
 

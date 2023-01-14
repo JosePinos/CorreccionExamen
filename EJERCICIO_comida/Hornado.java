@@ -1,11 +1,12 @@
 package EJERCICIO_comida;
 
-public class HotDog extends comidaRapida{
+public class Hornado extends comidaTradicional{
 
     private String puntoVenta;
     private String nombrePlato;
     private double precio;
-    public HotDog(String origen, String ingredientes, int tiempoPreparacion, String puntoVenta,
+
+    public Hornado(String origen, String ingredientes, int tiempoPreparacion, String puntoVenta,
                   String nombrePlato, double precio){
         super(origen, ingredientes, tiempoPreparacion);
 
@@ -40,5 +41,6 @@ public class HotDog extends comidaRapida{
                 "Su tiempo de preparación es de " + getTiempoPreparacion() + "s y este plato se vende en: " + getPuntoVenta()
                 +"\n a un precio de " + getPrecio() + "$.";
     }
+
 
 }
