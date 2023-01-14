@@ -35,7 +35,7 @@ public class HotDog extends comidaRapida{
 
     @Override
     public String preparacion(){
-        return getNombrePlato() + " de origen " + getOrigen() + " tiene como ingredientes:\n"
+        return "El plato "+getNombrePlato() + " de origen " + getOrigen() + " tiene como ingredientes:\n"
                 + getIngredientes() + ".\n"+
                 "Su tiempo de preparación es de " + getTiempoPreparacion() + "s y este plato se vende en: " + getPuntoVenta()
                 +"\n a un precio de " + getPrecio() + "$.";

@@ -7,8 +7,8 @@ public class Hornado extends comidaTradicional{
     private double precio;
 
     public Hornado(String origen, String ingredientes, int tiempoPreparacion, String puntoVenta,
-                  String nombrePlato, double precio){
-        super(origen, ingredientes, tiempoPreparacion);
+                  String nombrePlato, double precio, String chef){
+        super(origen, ingredientes, tiempoPreparacion, chef);
 
         if(precio < 0.0){
             throw new IllegalArgumentException("El precio debe ser >= 0.0");
@@ -36,7 +36,7 @@ public class Hornado extends comidaTradicional{
 
     @Override
     public String preparacion(){
-        return getNombrePlato() + " de origen " + getOrigen() + " tiene como ingredientes:\n"
+        return "El platillo tradicional "+getNombrePlato() + " de origen " + getOrigen() + " tiene como ingredientes:\n"
                 + getIngredientes() + ".\n"+
                 "Su tiempo de preparación es de " + getTiempoPreparacion() + "s y este plato se vende en: " + getPuntoVenta()
                 +"\n a un precio de " + getPrecio() + "$.";

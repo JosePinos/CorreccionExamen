@@ -4,8 +4,9 @@ public abstract class comidaTradicional extends Comida{
 
     private String ingredientes;
     private int tiempoPreparacion;
+    private String chef;
 
-    public comidaTradicional(String origen, String ingredientes, int tiempoPreparacion){
+    public comidaTradicional(String origen, String ingredientes, int tiempoPreparacion, String chef){
         super(origen);
 
         if(tiempoPreparacion < 0){
@@ -14,6 +15,7 @@ public abstract class comidaTradicional extends Comida{
 
         this.ingredientes = ingredientes;
         this.tiempoPreparacion = tiempoPreparacion;
+        this.chef = chef;
     }
 
 
@@ -34,4 +36,11 @@ public abstract class comidaTradicional extends Comida{
         this.tiempoPreparacion = tiempoPreparacion;
     }
 
+    public String getChef() {
+        return chef;
+    }
+
+    public void setChef(String chef) {
+        this.chef = chef;
+    }
 }
